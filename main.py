@@ -1,14 +1,16 @@
 # Create an application to estimate the clothing size based on height, weight and age.
 # create a separate function for doing the estimation
 
+# Import required for application
+from EDA import *
+from LinearRegression import *
+from ClassificationModel import *
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
+file = 'final_test.csv'
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    df = produce_eda(file)
+    multiple_regression(df)
+    naive_bayes(df)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
